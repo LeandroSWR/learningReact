@@ -8,8 +8,8 @@ const projects = [
 
 export default function App() {
   return (
-    <Router>
-      {/* Persistent Navigation Bar */}
+    <Router basename="/learningReact">
+    {/* Persistent Navigation Bar */}
       <nav className="bg-gray-800 p-4 text-white flex justify-center space-x-4">
         <NavLink to="/" className={({ isActive }) => isActive ? "text-yellow-400 font-bold" : "text-white hover:text-yellow-400 transition"}>Home</NavLink>
         {projects.map((project) => (
@@ -52,7 +52,7 @@ function ProjectPage({ name, path }) {
     <div className="p-4 w-full flex flex-col items-center">
       <h2 className="text-2xl font-bold mb-4">{name}</h2>
       <iframe
-        src={`/learningReact/projects/${path}/index.html`} // Corrected project path
+        src={`/learningReact/projects/${path}/index.html`} // Ensure path is correctly formatted
         className="w-full h-screen border-none"
         title={name}
       />

@@ -25,7 +25,7 @@ export default function App() {
       </nav>
 
       {/* Page Content Below the Tabs */}
-      <div className="content">
+      <div className="content no-margin">
         <Routes>
           <>
             <Route path="/" element={<Home />} />
@@ -49,11 +49,11 @@ function Home() {
 
 function ProjectPage({ name, path }) {
   return (
-    <div className="project-container">
+    <div className="project-container full-screen no-margin">
       <h2 className="project-title">{name}</h2>
       <iframe
         src={`https://leandroswr.github.io/learningReact/projects/${path}/index.html`} // ✅ FIXED: Full GitHub Pages path
-        className="project-iframe full-screen"
+        className="project-iframe full-screen no-margin"
         title={name}
       />
     </div>

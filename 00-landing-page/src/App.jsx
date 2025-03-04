@@ -11,12 +11,12 @@ export default function App() {
     <Router>
       {/* Persistent Navigation Bar */}
       <nav className="bg-gray-800 p-4 text-white flex justify-center space-x-4">
-        <NavLink to="/" className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}>Home</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? "text-yellow-400 font-bold" : "text-white hover:text-yellow-400 transition"}>Home</NavLink>
         {projects.map((project) => (
           <NavLink
             key={project.path}
             to={`/${project.path}`}
-            className={({ isActive }) => isActive ? "text-yellow-400" : "text-white"}
+            className={({ isActive }) => isActive ? "text-yellow-400 font-bold" : "text-white hover:text-yellow-400 transition"}
           >
             {project.name}
           </NavLink>
@@ -49,10 +49,10 @@ function Home() {
 
 function ProjectPage({ name, path }) {
   return (
-    <div className="p-4">
+    <div className="p-4 w-full flex flex-col items-center">
       <h2 className="text-2xl font-bold mb-4">{name}</h2>
       <iframe
-        src={`/projects/${path}/index.html`}
+        src={`/learningReact/projects/${path}/index.html`} // Corrected project path
         className="w-full h-screen border-none"
         title={name}
       />

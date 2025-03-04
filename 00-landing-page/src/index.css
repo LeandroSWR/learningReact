@@ -1,3 +1,10 @@
+/* Ensure body doesn’t scroll */
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 /* Navigation Bar */
 .nav-bar {
   background: #222;
@@ -19,8 +26,12 @@
 
 /* Home Page */
 .home-text {
+  height: 100vh;
   font-size: 1.5rem;
   text-align: center;
+  padding-top: 40vh;
+  color: white;
+  font-weight: bold;
 }
 
 .nav-link:hover {
@@ -34,46 +45,27 @@
 
 /* Page Content */
 .content {
-  width: 100vw;
-  min-height: 100vh;
   background-color: #111;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Prevent content from adding scroll */
 }
 
-/* Remove unwanted margins/padding */
-.no-margin {
-  margin: 0;
-  padding: 0;
-}
-
-/* Home Page */
-.home-text {
-  font-size: 1.5rem;
-  text-align: center;
-  color: white;
-}
-
-/* Ensure the iframe takes up the full screen */
-.full-screen {
-  width: 100vw;
-  height: 100vh;
-}
-
-/* Project container for full-screen display */
 .project-container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Ensure iframe fills the entire container */
 .project-iframe {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   border: none;
+  margin: 0;
+  padding: 0;
 }

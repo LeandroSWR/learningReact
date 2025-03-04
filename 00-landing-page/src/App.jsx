@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-import "./index.css"
+import {useEffect, useRef} from "react";
 
 const projects = [
   { name: "Starting Project", path: "starting-project" },
@@ -25,7 +25,7 @@ export default function App() {
       </nav>
 
       {/* Page Content Below the Tabs */}
-      <div className="content no-margin">
+      <div className="content">
         <Routes>
           <>
             <Route path="/" element={<Home />} />
@@ -48,11 +48,30 @@ function Home() {
 }
 
 function ProjectPage({ name, path }) {
+  const iframeRef = useRef(null);
+  useEffect(() => {
+    const adjustIframeHeight = () => {
+      const iframe = iframeRef.current;
+      if (iframe) {
+        iframe.style.height = `${window.innerHeight - iframe.offsetTop}px`;
+      }
+    };
+
+    // Adjust on mount
+    adjustIframeHeight();
+
+    // Adjust when window resizes
+    window.addEventListener("resize", adjustIframeHeight);
+    return () => {
+      window.removeEventListener("resize", adjustIframeHeight);
+    };
+  }, []);
   return (
-    <div className="project-container no-margin">
+    <div className="project-container">
       <iframe
+        ref={iframeRef}
         src={`https://leandroswr.github.io/learningReact/projects/${path}/index.html`}
-        className="project-iframe full-screen no-margin"
+        className="project-iframe"
         title={name}
       />
     </div>

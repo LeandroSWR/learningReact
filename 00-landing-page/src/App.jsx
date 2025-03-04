@@ -49,8 +49,7 @@ function Home() {
 
 function ProjectPage({ name, path }) {
   return (
-    <div className="project-container full-screen no-margin">
-      <h2 className="project-title">{name}</h2>
+    <div className="project-container no-margin">
       <iframe
         src={`https://leandroswr.github.io/learningReact/projects/${path}/index.html`} // ✅ FIXED: Full GitHub Pages path
         className="project-iframe full-screen no-margin"

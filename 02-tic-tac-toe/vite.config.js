@@ -5,7 +5,7 @@ export default defineConfig({
   base: "/learningReact/tic-tac-toe", // Set the base URL
   plugins: [react()],
   build: {
-    outDir: "../docs/tic-tac-toe" // Change build output directory
+    outDir: "../docs/projects/tic-tac-toe" // Change build output directory
   }
 });
 

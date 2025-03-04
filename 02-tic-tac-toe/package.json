@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d ../docs/tic-tac-toe"
+    "deploy": "gh-pages -d ../docs/projects/tic-tac-toe"
   },
   "dependencies": {
     "react": "^19.0.0",

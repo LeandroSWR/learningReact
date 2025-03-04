@@ -9,7 +9,7 @@ const projects = [
 
 export default function App() {
   return (
-    <Router basename="/learningReact"> {/* ✅ FIXED: Ensure correct repo name */}
+    <Router basename="/learningReact">
       {/* Persistent Navigation Bar */}
       <nav className="nav-bar">
         <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
@@ -51,7 +51,7 @@ function ProjectPage({ name, path }) {
   return (
     <div className="project-container no-margin">
       <iframe
-        src={`https://leandroswr.github.io/learningReact/projects/${path}/index.html`} // ✅ FIXED: Full GitHub Pages path
+        src={`https://leandroswr.github.io/learningReact/projects/${path}/index.html`}
         className="project-iframe full-screen no-margin"
         title={name}
       />

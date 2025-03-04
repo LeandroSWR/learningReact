@@ -17,6 +17,12 @@
   transition: background 0.3s ease;
 }
 
+/* Home Page */
+.home-text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .nav-link:hover {
   background: #444;
 }
@@ -46,12 +52,7 @@
 .home-text {
   font-size: 1.5rem;
   text-align: center;
-}
-
-.project-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  color: white;
 }
 
 /* Ensure the iframe takes up the full screen */

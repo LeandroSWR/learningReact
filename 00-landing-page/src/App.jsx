@@ -53,7 +53,7 @@ function ProjectPage({ name, path }) {
       <h2 className="project-title">{name}</h2>
       <iframe
         src={`https://leandroswr.github.io/learningReact/projects/${path}/index.html`} // ✅ FIXED: Full GitHub Pages path
-        className="project-iframe"
+        className="project-iframe full-screen"
         title={name}
       />
     </div>

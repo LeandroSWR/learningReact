@@ -43,7 +43,19 @@
   text-align: center;
 }
 
-/* Project Page */
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Ensure the iframe takes up the full screen */
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Project container for full-screen display */
 .project-container {
   width: 100vw;
   height: 100vh;
@@ -53,12 +65,7 @@
   justify-content: center;
 }
 
-.project-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
+/* Ensure iframe fills the entire container */
 .project-iframe {
   width: 100%;
   height: 100%;

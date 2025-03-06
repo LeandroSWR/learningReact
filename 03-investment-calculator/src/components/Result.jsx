@@ -3,6 +3,15 @@ import {calculateInvestmentResults, formatter} from "../util/investment.js";
 export default function Result ({investmentData}) {
   const results = calculateInvestmentResults(investmentData);
 
+  if (investmentData.duration <= 0 || investmentData.initialInvestment <= 0 ||
+    investmentData.expectedReturn <= 0 || investmentData.annualInvestment < 0) {
+    return (
+      <section className="center">
+        <p>Input data is not valid... All values should be positive!</p>
+      </section>
+    )
+  }
+
   return (
     <section>
       <table id="result">

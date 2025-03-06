@@ -2,7 +2,6 @@ import Header from "./components/Header.jsx";
 import UserInput from "./components/UserInput.jsx";
 import Result from "./components/Result.jsx";
 import {useState} from "react";
-import {calculateInvestmentResults} from "./util/investment.js";
 
 function App() {
   const [investmentData, setInvestmentData] = useState({
@@ -12,8 +11,6 @@ function App() {
     duration: 10
   });
 
-  const annualData = calculateInvestmentResults(investmentData);
-
   function handleInvestmentDataUpdate(updatedData) {
     setInvestmentData(updatedData);
   }
@@ -22,7 +19,7 @@ function App() {
     <>
       <Header />
       <UserInput onUserInputUpdate={handleInvestmentDataUpdate} userInput={investmentData} />
-      <Result annualData={annualData} investmentData={investmentData} />
+      <Result investmentData={investmentData} />
     </>
   );
 }

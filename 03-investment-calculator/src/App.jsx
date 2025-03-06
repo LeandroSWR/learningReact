@@ -11,11 +11,11 @@ function App() {
     expectedReturn: 6,
     duration: 10
   });
-  const [annualData, setAnnualData] = useState(calculateInvestmentResults(investmentData));
+
+  const annualData = calculateInvestmentResults(investmentData);
 
   function handleInvestmentDataUpdate(updatedData) {
     setInvestmentData(updatedData);
-    setAnnualData(calculateInvestmentResults(updatedData));
   }
 
   return (

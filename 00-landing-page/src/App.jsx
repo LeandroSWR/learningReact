@@ -4,7 +4,8 @@ import {useEffect, useRef} from "react";
 const projects = [
   { name: "Starting Project", path: "starting-project" },
   { name: "Tic Tac Toe", path: "tic-tac-toe" },
-  { name: "Investment Calculator", path: "investment-calculator" }
+  { name: "Investment Calculator", path: "investment-calculator" },
+  { name: "The Almost Final Countdown", path: "countdown" }
 ];
 
 export default function App() {
